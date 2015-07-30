@@ -11,5 +11,15 @@
     %header
       = render 'layouts/navigation'
     %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+      %ul.bxslider
+        %li 
+          = image_tag "houses.jpg"
+        %li 
+          = image_tag "hillside.jpg"
+      #content.pull-left
+        = render 'layouts/messages'
+        = yield
+      #sidebar.pull-right.panel.panel-default
+        .panel-heading
+          %h3 Новости
+        .panel-body

@@ -1,0 +1,34 @@
+%h1 Мои компании
+
+%table.table
+  %thead
+    %tr
+      %th Правовая форма
+      %th Юридическое название
+      %th Сайт
+      %th Специализация
+      %th О компании
+      %th Представитель
+      %th Фотография
+      %th
+      %th
+      %th
+
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.company_type
+        %td= company.company_name
+        %td= company.website
+        %td= company.specialization
+        %td= company.about
+        %td
+          = company.owner.user.name if company.owner
+        %td= company.photo
+        %td= link_to 'Подробнее', company, class: 'btn btn-default'
+        %td= link_to 'Редактировать компанию', edit_company_path(company), class: 'btn btn-default'
+        %td= link_to 'Удалить компанию', company, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
+
+%br
+
+= link_to 'Добавить компанию', new_company_path, class: 'btn btn-default'

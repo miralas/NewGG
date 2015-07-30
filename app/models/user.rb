@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  enum role: [:user, :vip, :admin]
+  enum role: [:client, :vip, :admin]
+  has_many :owners
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
       user.uid = auth['uid']
       if auth['info']
          user.name = auth['info']['name'] || ""
+         user.email = auth['info']['email'] || ""
       end
     end
   end

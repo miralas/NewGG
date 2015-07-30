@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootsy
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bxslider
 //= require_tree .
+
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});

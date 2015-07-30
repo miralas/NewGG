@@ -10,6 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require bxslider
+ *= require bootsy
+ *= require_tree .
  */
+
+#content {
+  width: 80%;
+}
+
+#sidebar {
+  width: 250px;
+}

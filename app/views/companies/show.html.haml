@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%h1
+  = @company.company_type
+  = @company.company_name
+%hr.btn-danger
+%p
+  %b О компании:
+  = @company.about
+%p
+  %b Сайт:
+  = @company.website
+%p
+  %b Представитель:
+  = @company.owner.user.name
+%p
+  %b Фотография:
+  - if !@company.photo.blank?
+    %image_tag @company.photo
+  - else
+    Фотография не добавлена
+
+= link_to 'Редактировать компанию', edit_company_path(@company), class: 'btn btn-default'
+= link_to 'Назад', companies_path, class: 'btn btn-default'

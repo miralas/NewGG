@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Company:
+  = @company_news.company
+%p
+  %b User:
+  = @company_news.user
+%p
+  %b Title:
+  = @company_news.title
+%p
+  %b Body:
+  = @company_news.body
+%p
+  %b Published:
+  = @company_news.published
+
+= link_to 'Edit', edit_company_news_path(@company_news)
+\|
+= link_to 'Back', company_news_index_path

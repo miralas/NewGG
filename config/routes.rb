@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :company_vacancies
+  resources :company_news
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+  resources :companies
   resources :users
   root to: 'visitors#index'
   get '/auth/:provider/callback' => 'sessions#create'

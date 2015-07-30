@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  simple_form:
+    labels:
+      defaults:
+        new: 
+          company_type: 'Правовая форма:'
+          company_name: 'Юридическое название:'
+          about: 'О компании:'
+          website: 'Сайт:'
+          photo: 'Фотография:'
+          specialization: 'Специализация:'

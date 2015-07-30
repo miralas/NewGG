@@ -1,0 +1,30 @@
+en:
+  bootsy:
+    action:
+      refresh: 'Обновить'
+      destroy: 'Удалить'
+      close: 'Закрыть'
+      load: 'Загрузить'
+      or: 'или'
+      upload: 'Загрузить новое изображение'
+      submit_upload: 'Загрузить'
+      enter_image_url: Enter a URL from the web...
+    image_gallery: 'Галерея изображений'
+    image:
+      s: 'Изображение'
+      p: 'Изображения'
+      size: 'Размер'
+      large: 'Большая'
+      medium: 'Средняя'
+      small: 'Маленькая'
+      original: 'Оригинал'
+      new: 'Новое изображение'
+      confirm:
+        destroy: 'Вы уверены, что хотите удалить изображение?'
+      position:
+        left: 'Слева'
+        right: 'Справа'
+        inline: 'По центру'
+    no_images_uploaded: 'На данный момент не загружено ни одного изображения.'
+    js:
+      alert_unsaved: 'У вас есть не сохраненные изменения.'
