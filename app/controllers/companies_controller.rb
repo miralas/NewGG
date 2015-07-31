@@ -5,12 +5,15 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.joins(:owner).where('user_id = ?', current_user)
+    @companies = Company.where(user_id: current_user)
   end
 
   # GET /companies/1
   # GET /companies/1.json
   def show
+    if News.where(company: self).first
+      @news = News.where(company: self, published: true).first.limit(10).desc(:updated_at)
+    end
   end
 
   # GET /companies/new
@@ -26,7 +29,7 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = Company.new(company_params)
-    @company.owner = Owner.create(user: current_user, company_id: self)
+    @company.user_id = current_user.id
 
     respond_to do |format|
       if @company.save

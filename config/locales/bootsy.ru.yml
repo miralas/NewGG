@@ -6,9 +6,9 @@ ru:
       close: 'Закрыть'
       load: 'Загрузить'
       or: 'или'
-      upload: 'Загрузить новое изображение'
+      upload: 'Загрузить изображение'
       submit_upload: 'Загрузить'
-      enter_image_url: Enter a URL from the web...
+      enter_image_url: 'Ссылка на изображение'
     image_gallery: 'Галерея изображений'
     image:
       s: 'Изображение'

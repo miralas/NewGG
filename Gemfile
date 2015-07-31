@@ -20,6 +20,7 @@ gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'pundit'
+gem 'rolify'
 gem 'simple_form'
 group :development do
   gem 'better_errors'

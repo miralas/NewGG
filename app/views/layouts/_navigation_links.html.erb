@@ -5,10 +5,16 @@
   <li><%= link_to 'Войти', signin_path %></li>
 <% end %>
 <% if user_signed_in? %>
-  <% if current_user.owners != nil %>
+  <% if current_user.companies.first != nil %>
     <li><%= link_to 'Мои компании', companies_path %></li>
+  <% else %>
+    <% if current_user.has_role? :client %>
+      <li><%= link_to 'Добавить компанию', companies_path %></li>
+    <% else %>
+      <li><%= link_to 'Добавить резюме', companies_path %></li>
+    <% end %>
   <% end %>
-  <% if current_user.try(:admin?) %>
+  <% if current_user.has_role? :admin %>
     <li><%= link_to 'Пользователи', users_path %></li>
   <% end %>
 <% end %>

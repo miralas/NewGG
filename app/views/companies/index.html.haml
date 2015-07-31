@@ -23,7 +23,7 @@
         %td= company.specialization
         %td= company.about
         %td
-          = company.owner.user.name if company.owner
+          = company.user_id.name if company.user_id
         %td= company.photo
         %td= link_to 'Подробнее', company, class: 'btn btn-default'
         %td= link_to 'Редактировать компанию', edit_company_path(company), class: 'btn btn-default'

@@ -1,0 +1,12 @@
+= simple_form_for(@news) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :body
+    = f.input :published
+    = f.input :company_id, value: params[:company].to_i
+
+  .form-actions
+    = f.button :submit, 'Добавить новость'
+    = link_to 'Назад', company_path(params[:company]), class: 'btn btn-default'

@@ -2,10 +2,13 @@ ru:
   simple_form:
     labels:
       defaults:
-        new: 
+        new:
           company_type: 'Правовая форма:'
           company_name: 'Юридическое название:'
           about: 'О компании:'
           website: 'Сайт:'
           photo: 'Фотография:'
           specialization: 'Специализация:'
+          title: 'Заголовок'
+          body: 'Текст'
+          published: 'Опубликована'

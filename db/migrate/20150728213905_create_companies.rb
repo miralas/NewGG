@@ -5,7 +5,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :company_name
       t.text :about
       t.string :website
-      t.references :owner, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
       t.string :photo
       t.boolean :is_payed
 

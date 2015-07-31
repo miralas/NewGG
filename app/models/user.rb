@@ -1,13 +1,14 @@
 class User < ActiveRecord::Base
-  enum role: [:client, :vip, :admin]
-  has_many :owners
+  rolify
+  has_many :news
+  has_and_belongs_to_many :companies
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
     if User.count == 0
-      self.role ||= :admin
+      self.add_role :admin
     else
-      self.role ||= :user
+      self.add_role :client
     end
   end
 

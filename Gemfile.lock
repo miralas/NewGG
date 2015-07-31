@@ -189,6 +189,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     remotipart (1.2.1)
+    rolify (4.0.0)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.1)
@@ -281,6 +282,7 @@ DEPENDENCIES
   rails (= 4.2.3)
   rails_12factor
   rails_layout
+  rolify
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
@@ -291,3 +293,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.6

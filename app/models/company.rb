@@ -1,7 +1,6 @@
 class Company < ActiveRecord::Base
   include Bootsy::Container
-  belongs_to :owner
-  has_many :company_news
+  has_and_belongs_to_many :user
   validates_presence_of :company_type, :company_name
 
   # after_create :add_owner
